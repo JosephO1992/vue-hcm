@@ -1,24 +1,9 @@
-# hcm-vue
+# Human Capital Management App
 
-## Project setup
-```
-npm install
-```
+## The Aim:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+I want to create an App that will allow me to add/delete "staff" from a database.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+This will be the largest project I've build that will be based off components and connecting to a database.
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+I will be creating this app in Vue, and using a MongoDB database hosted in the cloud, I will be using a database as a service so I don't have to worry about this part!
