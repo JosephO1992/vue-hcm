@@ -1,6 +1,6 @@
 <template>
   <Header/>
-  <Resource/>
+  <Resource name="Joe"></Resource>
   
 </template>
 
