@@ -1,6 +1,7 @@
 <template>
   <Header/>
-  <Resource name="Joe"></Resource>
+  <Resource name="Joe" phone-number="0410 923 493" email-address="joe@test.com" home-address="1 Retail Street, Perth" country="Australia"></Resource>
+  <Resource name="Dave" phone-number="0410 234 213" email-address="dave@test.com" home-address="4 Guest Street, Perth" country="Australia"></Resource>
   
 </template>
 
