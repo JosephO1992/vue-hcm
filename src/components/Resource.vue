@@ -12,10 +12,7 @@
       <div class="container">
         <h3>Email Address: </h3> <p>{{emailAddress}}</p>
       </div>
-        <div class="container">
-        <h3>Country: </h3> <p>{{country}}</p>
-       
-      </div>
+  
      </div> 
   
 </template>
@@ -30,17 +27,11 @@ export default {
       'phoneNumber',
       'homeAddress',
       'emailAddress',
-      'country'
   ]
-  // data() {
-  //     return {
-  //         contractor: {
-  //             rate: "98"
-  //         }
-  //     }
-  // }
+  
+  }
 
-}
+
     
 </script>
 
