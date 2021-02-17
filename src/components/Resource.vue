@@ -3,7 +3,9 @@
       <div class="container">
         <h3>Name: </h3> <p>{{name}}</p>
         </div>
-      <div class="container">
+      <base-button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show'}} Details</base-button>
+      <ul v-if="detailsAreVisible">
+        <div class="container">
         <h3>Phone: </h3> <p>{{phoneNumber}}</p>
       </div>
       <div class="container">
@@ -13,21 +15,35 @@
         <h3>Email Address: </h3> <p>{{emailAddress}}</p>
       </div>
   
+      </ul>
+      
      </div> 
   
 </template>
 
 <script>
 
+import BaseButton from './UI/BaseButton.vue'
 
 export default {
+  components: { BaseButton },
   name: "Resource",
   props: [
       'name',
       'phoneNumber',
       'homeAddress',
       'emailAddress',
-  ]
+  ],
+  data() {
+    return {
+      detailsAreVisible: false
+    }
+  },
+  methods: {
+    toggleDetails() {
+      this.detailsAreVisible = !this.detailsAreVisible
+    }
+  }
   
   }
 
@@ -63,7 +79,7 @@ p {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  padding-left: 10px;
+  padding: 10px;
 }
 .container {
   display: flex;

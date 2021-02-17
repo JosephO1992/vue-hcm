@@ -1,5 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
 
+import NewResource from "./components/NewResource.vue";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.component("new-resource", NewResource);
+
+app.mount("#app");

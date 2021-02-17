@@ -3,6 +3,8 @@
   <!-- <Resource name="Joe" phone-number="0410 923 493" email-address="joe@test.com" home-address="1 Retail Street, Perth" country="Australia"></Resource>
   <Resource name="Dave" phone-number="0410 234 213" email-address="dave@test.com" home-address="4 Guest Street, Perth" country="Australia"></Resource>
   <Resource name="Chloe" phone-number="0410 251 215" email-address="chloe@test.com" home-address="4 Nugget Close, Perth" country="Australia"></Resource> -->
+  <New-resource @add-contact="addContractor"></New-resource>
+  
   <Resource 
   v-for="contractor in contractors"
   :key="contractor.id"
@@ -18,12 +20,15 @@
 
 import Header from './components/UI/Header.vue'
 import Resource from './components/Resource.vue'
+import NewResource from './components/NewResource.vue'
+
 
 export default {
   name: 'App',
   components: {
     Header,
     Resource,
+    NewResource,
     
   },
   data() {
@@ -42,10 +47,25 @@ export default {
               emailAddress: "dave@test.com"
           }
               
-          ],
+          ]
          
       }
-}}
+},
+
+methods: {
+  addContractor(name, phone, address, email) {
+    const newContractorContact = {
+      id: new Date().toISOString(),
+      name: name,
+      phoneNumber: phone,
+      homeAddress: address,
+      emailAddress: email
+    };
+    this.contractors.push(newContractorContact)
+}
+}
+}
+
 </script>
 
 <style>
