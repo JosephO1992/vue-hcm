@@ -3,7 +3,7 @@
       <div class="container">
         <h3>Name: </h3> <p>{{name}}</p>
         </div>
-      <base-button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show'}} Details</base-button>
+      <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show'}} Details</button>
       <ul v-if="detailsAreVisible">
         <div class="container">
         <h3>Phone: </h3> <p>{{phoneNumber}}</p>
@@ -16,6 +16,8 @@
       </div>
   
       </ul>
+      <button @click="$emit('delete-contact', id)">Delete Contractor</button>
+      <button @click="$emit('alert')">Alert</button>
       
      </div> 
   
@@ -23,17 +25,34 @@
 
 <script>
 
-import BaseButton from './UI/BaseButton.vue'
+
 
 export default {
-  components: { BaseButton },
+  
   name: "Resource",
-  props: [
-      'name',
-      'phoneNumber',
-      'homeAddress',
-      'emailAddress',
-  ],
+  props: {
+      id: {
+        type: String,
+        required: true
+      },
+      name: {
+        type: String,
+        required: true
+      },
+      phoneNumber: {
+        type: String,
+        required: true
+      },
+      homeAddress: {
+        type: String,
+        required: true
+      },
+      emailAddress: {
+        type: String,
+        required: true
+      },
+  },
+  emits: ['delete-contact', 'alert'],
   data() {
     return {
       detailsAreVisible: false
@@ -43,11 +62,10 @@ export default {
     toggleDetails() {
       this.detailsAreVisible = !this.detailsAreVisible
     }
+ 
   }
   
   }
-
-
     
 </script>
 

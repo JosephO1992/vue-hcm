@@ -14,16 +14,16 @@
             <label>Home Address</label>
             <input type="text" v-model="enteredAddress">
         </div>
-        <base-button class="btn">Add Contact</base-button>
+        <button class="btn">Add Contact</button>
         
     </form>
 </template>
 
 <script>
-import BaseButton from './UI/BaseButton.vue'
+
 
 export default {
-  components: { BaseButton },
+
   emits: ['add-contact'],
   data(){
       return {

@@ -8,10 +8,13 @@
   <Resource 
   v-for="contractor in contractors"
   :key="contractor.id"
+  :id="contractor.id"
   :name="contractor.name"
   :phoneNumber="contractor.phoneNumber"
   :homeAddress="contractor.homeAddress"
   :emailAddress="contractor.emailAddress"
+   @delete-contact="deleteContractor"
+   @alert="alertBrowser"
   >
   </Resource>
 </template>
@@ -60,10 +63,16 @@ methods: {
       phoneNumber: phone,
       homeAddress: address,
       emailAddress: email
-    };
+      };
     this.contractors.push(newContractorContact)
-}
-}
+    }, deleteContractor(contractorId){
+      this.contractors = this.contractors.filter(contractor => contractor.id !== contractorId)
+  },
+  alertBrowser() {
+    alert('This is working')
+  }
+  },
+ 
 }
 
 </script>
