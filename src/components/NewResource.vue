@@ -5,6 +5,10 @@
             <input type="text" v-model="enteredName">
         </div>
         <div>
+            <label>Surname</label>
+            <input type="text" v-model="enteredSurname">
+        </div>
+        <div>
             <label>Email Address</label>
             <input type="email" v-model="enteredEmail"></div>
         <div>  
@@ -28,6 +32,7 @@ export default {
   data(){
       return {
           enteredName: '',
+          enteredSurname: '',
           enteredPhone: '',
           enteredEmail: '',
           enteredAddress: ''
@@ -35,7 +40,7 @@ export default {
   },
   methods: {
       submitData() {
-          this.$emit('add-contact', this.enteredName, this.enteredPhone, this.enteredAddress, this.enteredEmail)
+          this.$emit('add-contact', this.enteredName, this.enteredSurname, this.enteredPhone, this.enteredAddress, this.enteredEmail)
       }
   }
     

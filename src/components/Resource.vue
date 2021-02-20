@@ -1,7 +1,7 @@
 <template>
    <div id="contractorTile" class="shadow mainContainer">
       <div class="container">
-        <h3>Name: </h3> <p>{{name}}</p>
+        <h3>Name: </h3> <p>{{name}} {{surname}}</p>
         </div>
       <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show'}} Details</button>
       <ul v-if="detailsAreVisible">
@@ -17,7 +17,7 @@
   
       </ul>
       <button @click="$emit('delete-contact', id)">Delete Contractor</button>
-      <button @click="$emit('alert')">Alert</button>
+     
       
      </div> 
   
@@ -39,6 +39,10 @@ export default {
         type: String,
         required: true
       },
+      surname: {
+        type: String,
+        required: true
+      },
       phoneNumber: {
         type: String,
         required: true
@@ -52,7 +56,7 @@ export default {
         required: true
       },
   },
-  emits: ['delete-contact', 'alert'],
+  emits: ['delete-contact'],
   data() {
     return {
       detailsAreVisible: false

@@ -10,11 +10,12 @@
   :key="contractor.id"
   :id="contractor.id"
   :name="contractor.name"
+  :surname="contractor.surname"
   :phoneNumber="contractor.phoneNumber"
   :homeAddress="contractor.homeAddress"
   :emailAddress="contractor.emailAddress"
    @delete-contact="deleteContractor"
-   @alert="alertBrowser"
+ 
   >
   </Resource>
 </template>
@@ -39,12 +40,14 @@ export default {
           contractors: [{
               id:"Joe",
               name: "Joe",
+              surname: "O'Reilly",
               phoneNumber:'0451 246 846',
               homeAddress: "15 Main st",
               emailAddress: "joe@test.com"
           },{
               id: "Dave",
               name: "Dave",
+              surname: "Smith",
               phoneNumber: "0485 126 985",
               homeAddress: "23 Main trc",
               emailAddress: "dave@test.com"
@@ -56,10 +59,11 @@ export default {
 },
 
 methods: {
-  addContractor(name, phone, address, email) {
+  addContractor(name, surname, phone, address, email) {
     const newContractorContact = {
       id: new Date().toISOString(),
       name: name,
+      surname: surname, 
       phoneNumber: phone,
       homeAddress: address,
       emailAddress: email
@@ -68,10 +72,9 @@ methods: {
     }, deleteContractor(contractorId){
       this.contractors = this.contractors.filter(contractor => contractor.id !== contractorId)
   },
-  alertBrowser() {
-    alert('This is working')
-  }
+
   },
+
  
 }
 
