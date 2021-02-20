@@ -8,7 +8,6 @@ This will be the largest project I've built that will be based off components an
 
 I will be creating this app in Vue, and using a MongoDB database hosted in the cloud, I will be using a database as a service so I don't have to worry about this part!
 
-<<<<<<< HEAD
 # Documentation:
 
 ## Vue HCM
@@ -266,9 +265,8 @@ methods: {
 You can see that this method is now receiving the same data you exported earlier and is being passed in as arguments.
 We can create a variable, assign the data to the same variable names as your current contractor data and push this into the array.
 
-DONE!
-=======
+# DONE!
+
 ## Caveat
 
 I'm not a designer, I haven't used a CCS library as Vue 3 hasn't got much support yet. I will be redisigning the app at a later stage and adding CSS in to make it look awesome!
->>>>>>> 94891492a9f56a68048b101da8ab61b926c9506a
