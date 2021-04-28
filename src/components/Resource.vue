@@ -1,19 +1,19 @@
 <template>
    <div id="contractorTile" class="shadow mainContainer">
       <div class="container">
-        <h3>Name: </h3> <p>{{name}}</p>
+        <h3>Name: </h3> <p>{{contractors.name}}</p>
         </div>
       <div class="container">
-        <h3>Phone: </h3> <p>{{phoneNumber}}</p>
+        <h3>Phone: </h3> <p>{{contractors.phoneNumber}}</p>
       </div>
       <div class="container">
-        <h3>Address: </h3> <p>{{homeAddress}}</p>
+        <h3>Address: </h3> <p>{{contractors.homeAddress}}</p>
       </div>
       <div class="container">
-        <h3>Email Address: </h3> <p>{{emailAddress}}</p>
+        <h3>Email Address: </h3> <p>{{contractors.emailAddress}}</p>
       </div>
         <div class="container">
-        <h3>Country: </h3> <p>{{country}}</p>
+        <h3>Country: </h3> <p>{{contractors.country}}</p>
        
       </div>
      </div> 
@@ -25,18 +25,33 @@
 
 export default {
   name: "Resource",
-  props: [
-      'name',
-      'phoneNumber',
-      'homeAddress',
-      'emailAddress',
-      'country'
-  ]
+  // props: [
+  //     'name',
+  //     'phoneNumber',
+  //     'homeAddress',
+  //     'emailAddress',
+  //     'country'
+  // ],
   // data() {
   //     return {
-  //         contractor: {
-  //             rate: "98"
+  //         contractors: [
+  //           {
+  //            id: "Joe", 
+  //            name: "Joe",
+  //            phoneNumber: "0419 203 843",
+  //            homeAddress: "23 Main St",
+  //            emailAddress: "joe@test.com",
+  //            country: 'Australia'
+  //         },
+  //         {
+  //           id:"Dave",
+  //           name:"Dave",
+  //           phoneNumber: "0410 234 213",
+  //           emailAddress:"dave@test.com",
+  //           homaAddress:"4 Guest Street, Perth", 
+  //           country: "Australia"
   //         }
+  //         ],
   //     }
   // }
 

@@ -1,7 +1,14 @@
 <template>
   <Header/>
-  <Resource name="Joe" phone-number="0410 923 493" email-address="joe@test.com" home-address="1 Retail Street, Perth" country="Australia"></Resource>
-  <Resource name="Dave" phone-number="0410 234 213" email-address="dave@test.com" home-address="4 Guest Street, Perth" country="Australia"></Resource>
+  <Resource 
+  v-for="contractor in contractors"
+  :key="contractor.id"
+  :name="contractor.name" 
+  :phone-number="contractor.phoneNumber" 
+  :email-address="contractor.emailAddress" 
+  :home-address="contractor.homaAddress" 
+  :country="contractor.country"></Resource>
+  
   
 </template>
 
@@ -16,6 +23,28 @@ export default {
     Header,
     Resource,
     
+  },
+  data() {
+      return {
+          contractors: [
+            {
+             id: "Joe", 
+             name: "Joe",
+             phoneNumber: "0419 203 843",
+             homeAddress: "23 Main St",
+             emailAddress: "joe@test.com",
+             country: 'Australia'
+          },
+          {
+            id:"Dave",
+            name:"Dave",
+            phoneNumber: "0410 234 213",
+            emailAddress:"dave@test.com",
+            homaAddress:"4 Guest Street, Perth", 
+            country: "Australia"
+          }
+          ],
+      }
   }
 }
 </script>
