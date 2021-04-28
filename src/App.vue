@@ -66,12 +66,13 @@ methods: {
       surname: surname, 
       phoneNumber: phone,
       homeAddress: address,
-      emailAddress: email
-      };
+      emailAddress: email };
+    
     this.contractors.push(newContractorContact)
     }, deleteContractor(contractorId){
       this.contractors = this.contractors.filter(contractor => contractor.id !== contractorId)
   },
+  
 
   },
 

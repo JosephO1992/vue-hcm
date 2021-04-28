@@ -1,24 +1,26 @@
 <template>
+
     <form class='container shadow' @submit.prevent="submitData">
-        <div>
+        <h2>Add Contractor</h2>
+        <div class="label-container">
             <label>Name</label>
             <input type="text" v-model="enteredName">
         </div>
-        <div>
+        <div class="label-container">
             <label>Surname</label>
             <input type="text" v-model="enteredSurname">
         </div>
-        <div>
+        <div  class="label-container">
             <label>Email Address</label>
             <input type="email" v-model="enteredEmail"></div>
-        <div>  
+        <div class="label-container">  
             <label>Phone Number</label>
             <input type="tel" v-model="enteredPhone"></div>
-        <div> 
+        <div class="label-container"> 
             <label>Home Address</label>
             <input type="text" v-model="enteredAddress">
         </div>
-        <button class="btn">Add Contact</button>
+        <button class="btn">Add Contractor</button>
         
     </form>
 </template>
@@ -40,8 +42,14 @@ export default {
   },
   methods: {
       submitData() {
-          this.$emit('add-contact', this.enteredName, this.enteredSurname, this.enteredPhone, this.enteredAddress, this.enteredEmail)
+          this.$emit('add-contact', this.enteredName, this.enteredSurname, this.enteredPhone, this.enteredAddress, this.enteredEmail);
+          this.enteredName= '';
+          this.enteredSurname= '';
+          this.enteredPhone= '';
+          this.enteredEmail= '';
+          this.enteredAddress= '';
       }
+     
   }
     
 }
@@ -60,6 +68,17 @@ export default {
 
 .btn {
     margin-top: 10px;
+    background-color: rgb(143 255 219)
+}
+
+.label-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-evenly;
+    margin-bottom: 0.5rem;
+    
 }
 
 .shadow {
