@@ -1,5 +1,12 @@
 <template>
    <div id="contractorTile" class="shadow mainContainer">
+<<<<<<< HEAD
+      <div class="container">
+        <h3>Name: </h3> <p>{{contractors.name}}</p>
+        </div>
+      <div class="container">
+        <h3>Phone: </h3> <p>{{contractors.phoneNumber}}</p>
+=======
       <div class="container contractor-heading-div">
         <h3 class="contractor-heading">{{name}} {{surname}}</h3>
         </div>
@@ -10,18 +17,26 @@
         
         <div class="container">
         <h3>Phone: </h3> <p>{{phoneNumber}}</p>
+>>>>>>> 1560e26da0d81204c61e3384b41d846cf9e82105
       </div>
       <div class="container">
-        <h3>Address: </h3> <p>{{homeAddress}}</p>
+        <h3>Address: </h3> <p>{{contractors.homeAddress}}</p>
       </div>
       <div class="container">
-        <h3>Email Address: </h3> <p>{{emailAddress}}</p>
+        <h3>Email Address: </h3> <p>{{contractors.emailAddress}}</p>
       </div>
+<<<<<<< HEAD
+        <div class="container">
+        <h3>Country: </h3> <p>{{contractors.country}}</p>
+       
+      </div>
+=======
   
       </ul>
       <button class="delete" @click="$emit('delete-contact', id)">Delete Contractor</button>
      
       
+>>>>>>> 1560e26da0d81204c61e3384b41d846cf9e82105
      </div> 
   
 </template>
@@ -31,6 +46,39 @@
 export default {
   
   name: "Resource",
+<<<<<<< HEAD
+  // props: [
+  //     'name',
+  //     'phoneNumber',
+  //     'homeAddress',
+  //     'emailAddress',
+  //     'country'
+  // ],
+  // data() {
+  //     return {
+  //         contractors: [
+  //           {
+  //            id: "Joe", 
+  //            name: "Joe",
+  //            phoneNumber: "0419 203 843",
+  //            homeAddress: "23 Main St",
+  //            emailAddress: "joe@test.com",
+  //            country: 'Australia'
+  //         },
+  //         {
+  //           id:"Dave",
+  //           name:"Dave",
+  //           phoneNumber: "0410 234 213",
+  //           emailAddress:"dave@test.com",
+  //           homaAddress:"4 Guest Street, Perth", 
+  //           country: "Australia"
+  //         }
+  //         ],
+  //     }
+  // }
+
+}
+=======
   props: {
       id: {
         type: String,
@@ -76,6 +124,7 @@ export default {
   }
   
   }
+>>>>>>> 1560e26da0d81204c61e3384b41d846cf9e82105
     
 </script>
 

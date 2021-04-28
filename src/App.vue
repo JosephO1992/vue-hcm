@@ -1,10 +1,22 @@
 <template>
   <Header/>
+<<<<<<< HEAD
+  <Resource 
+  v-for="contractor in contractors"
+  :key="contractor.id"
+  :name="contractor.name" 
+  :phone-number="contractor.phoneNumber" 
+  :email-address="contractor.emailAddress" 
+  :home-address="contractor.homaAddress" 
+  :country="contractor.country"></Resource>
+  
+=======
   <!-- <Resource name="Joe" phone-number="0410 923 493" email-address="joe@test.com" home-address="1 Retail Street, Perth" country="Australia"></Resource>
   <Resource name="Dave" phone-number="0410 234 213" email-address="dave@test.com" home-address="4 Guest Street, Perth" country="Australia"></Resource>
   <Resource name="Chloe" phone-number="0410 251 215" email-address="chloe@test.com" home-address="4 Nugget Close, Perth" country="Australia"></Resource> -->
   <the-navigation></the-navigation>
   <New-resource @add-contact="addContractor"></New-resource>
+>>>>>>> 1560e26da0d81204c61e3384b41d846cf9e82105
   
   <Resource 
   v-for="contractor in contractors"
@@ -73,6 +85,31 @@ methods: {
       homeAddress: address,
       emailAddress: email };
     
+<<<<<<< HEAD
+  },
+  data() {
+      return {
+          contractors: [
+            {
+             id: "Joe", 
+             name: "Joe",
+             phoneNumber: "0419 203 843",
+             homeAddress: "23 Main St",
+             emailAddress: "joe@test.com",
+             country: 'Australia'
+          },
+          {
+            id:"Dave",
+            name:"Dave",
+            phoneNumber: "0410 234 213",
+            emailAddress:"dave@test.com",
+            homaAddress:"4 Guest Street, Perth", 
+            country: "Australia"
+          }
+          ],
+      }
+  }
+=======
     this.contractors.push(newContractorContact)
     }, deleteContractor(contractorId){
       this.contractors = this.contractors.filter(contractor => contractor.id !== contractorId)
@@ -82,6 +119,7 @@ methods: {
   },
 
  
+>>>>>>> 1560e26da0d81204c61e3384b41d846cf9e82105
 }
 
 </script>
