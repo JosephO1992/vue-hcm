@@ -1,5 +1,5 @@
 <template>
-    <button>Add Staff Member</button>
+    <button></button>
 </template>
 
 <script>
